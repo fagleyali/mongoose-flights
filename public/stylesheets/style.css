@@ -91,7 +91,7 @@ nav a:hover{
   
   width: 700px;
   justify-content: center;
-  margin: 50px auto 0px auto;
+  margin: 20px auto 0px auto;
 }
 
   h1, h2{
@@ -104,7 +104,7 @@ nav a:hover{
     grid-column: span 2;
     width: 10rem;
     text-align: center;
-    margin: 20px auto 0 auto;
+    margin: 10px auto 0 auto;
    background-color: white;
    border-radius: 10px;
    height: 40px;

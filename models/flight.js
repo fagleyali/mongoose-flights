@@ -6,7 +6,11 @@ var destinationSchema = new Schema({
     type: String,
     enum: ['AUS','DAL','LAX','SEA']
   },
-  arrival: Date
+  arrival: Date,
+  
+},{
+    timestamps: true
+  
 })
 
 var flightSchema = new Schema({
@@ -28,7 +32,9 @@ var flightSchema = new Schema({
       default: 'SEA'
     },
     destinations: [destinationSchema]
-    
+  },{
+    timestamps: true
+ 
 })
 
 module.exports = mongoose.model('Flight',flightSchema);
