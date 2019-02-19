@@ -1,4 +1,4 @@
-var Ticket = require('../models/ticket')
+const Ticket = require('../models/ticket')
 
 module.exports={
     new: newTicket,
@@ -6,15 +6,14 @@ module.exports={
 }
 
 function newTicket(req, res){
-    Ticket.find({},function(err,tickets){
-        res.render('tickets/new',{
-            title: "Add Ticket",
-            tickets});
+    res.render('tickets/new', {
+        title: "Add a New Ticket",
+        flightId: req.params.id
     })
 }
 
-function create (req,res){
+function create(req,res){
     Ticket.create(req.body,function(err,ticket){
-        res.redirect('/tickets/new');
+        res.redirect('/flights/' + ticket.flight);
     })
 }

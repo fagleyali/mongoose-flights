@@ -12,7 +12,11 @@
             <!-- start cast list -->
             <div class="col-25">Destination:</div>
       </section>
-
+      <h3>Tickets For This FLight</h3>
+      <% foundTickets.forEach(ticket => {%>
+          <p>Seat: <%=ticket.seat%> | Price: <%=ticket.price%></p>
+      <%})%>
+      <a href="/flights/<%=flight.id %>/tickets/new">Add A New Ticket</a>
       <h2>Destinations</h2>
  <form id="add-destination-form" method="POST"
    action="/flights/<%= flight._id %>/destinations">
@@ -51,6 +55,7 @@
 <% } else { %>
   <h5>No Destination Yet</h5>
 <% } %>
+
 
     
         <%- include('../partials/footer') %>
