@@ -80,7 +80,22 @@ nav a:hover{
   text-align: right;
   font-size: 20px;
   
+} 
+
+.col-100{
+  width: 50%;
 }
+
+#ticketForm{
+ margin: 0 auto;
+}
+
+.ticketDetails{
+  
+  display: inline-block;
+}
+
+
 
 #new-form ,#show-page ,#add-destination-form, #add-ticket-form {
   display: grid;
