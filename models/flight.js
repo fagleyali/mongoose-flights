@@ -32,6 +32,7 @@ var flightSchema = new Schema({
       default: 'SEA'
     },
     destinations: [destinationSchema]
+
   },{
     timestamps: true
  
